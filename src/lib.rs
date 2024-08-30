@@ -1,7 +1,5 @@
 use uuid::Uuid;
-use zed_extension_api::{
-    self as zed, SlashCommand, SlashCommandOutput, SlashCommandOutputSection, Worktree,
-};
+use zed_extension_api::{self as zed, SlashCommand, SlashCommandOutput, Worktree};
 
 struct UuidExtension;
 
@@ -20,10 +18,7 @@ impl zed::Extension for UuidExtension {
             "uuidv4" => {
                 let uuid = Uuid::new_v4().to_string();
                 Ok(SlashCommandOutput {
-                    sections: vec![SlashCommandOutputSection {
-                        range: (0..uuid.len()).into(),
-                        label: "UUID v4".to_string(),
-                    }],
+                    sections: vec![],
                     text: uuid,
                 })
             }
