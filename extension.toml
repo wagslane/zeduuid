@@ -1,0 +1,11 @@
+id = "zeduuid"
+name = "UUID Generator"
+version = "0.0.1"
+schema_version = 1
+authors = ["wagslane <lane.c.wagner@gmail.com>"]
+description = "UUID Generator"
+repository = "https://github.com/wagslane/zeduuid"
+
+[slash_commands.uuidv4]
+description = "generates a random UUIDv4"
+requires_argument = false
